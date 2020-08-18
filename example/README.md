@@ -1,62 +1,16 @@
-## **Usage**
+# example
 
-### **As EditableText**
+A new Flutter project.
 
-```dart
-class MyHomePage extends StatelessWidget {
-  final TextEditingController _textEditingController = TextEditingController();
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            HashTagEditableText(
-              controller: _textEditingController,
-              cursorColor: Theme.of(context).cursorColor,
-              basicStyle: Theme.of(context).textTheme.headline,
-              focusNode: FocusNode(),
-              onChanged: (_) {},
-              onSubmitted: (_) {},
-              decoratedStyle: Theme.of(context)
-                  .textTheme
-                  .headline
-                  .copyWith(color: Theme.of(context).accentColor),
-            ),
-          ],
-        ),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
-  }
-}
-```
+## Getting Started
 
-### **As RichText**
-```dart
-class MyHomePage extends StatelessWidget {
-  final TextEditingController _textEditingController = TextEditingController();
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            RichText(
-              text: getHashTagTextSpan(
-                decoratedStyle: TextStyle(fontSize: 14, color: Colors.red),
-                basicStyle: TextStyle(fontSize: 14, color: Colors.black),
-                source: "#Hello world. Hello #world",
-                onTap: (text) {
-                  print(text);
-                },
-              ),
-            ),
-          ],
-        ),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
-  }
-}
-```
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.

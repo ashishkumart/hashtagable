@@ -20,11 +20,12 @@ class Decoration extends Comparable<Decoration> {
 class Decorator {
   final TextStyle textStyle;
   final TextStyle decoratedStyle;
-  static final hashTagRegExp = RegExp(
-    "(?!\\n)(?:^|\\s)(#([·・ー_ぁ-んァ-ンa-zA-Z0-9一-龠０-９ａ-ｚＡ-ＺáàãâéêíóôõúüçÁÀÃÂÉÊÍÓÔÕÚÜÇ]+))",
+ /* static final hashTagRegExp = RegExp(
+    "(?!\\n)(?:^|\\s)(#([·・ー_ぁ-んァ-ンa-zA-Z0-9一-龠０-９ａ-ｚＡ-ＺáàãâéêíóôõúüçÁÀÃÂÉÊÍÓÔÕÚÜÇ]+))", */
+    static final hashTagRegExp = RegExp(
+    "(?!\\n)(?:^|\\s)(#([·・ー_ぁ-んァ-ンa-zA-Z0-9一-龠０-９ａ-ｚＡ-ＺáàãâéêíóôõúçäöüÁÀÃÂÉÊÍÓÔÕÚÇÄÖÜß]+))",
     multiLine: true,
   );
-
   Decorator({this.textStyle, this.decoratedStyle});
 
   List<Decoration> _getSourceDecorations(
